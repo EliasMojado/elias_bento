@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        biege1: "#FAF0E6",
+        biege2: '#EED9C4',
+        biege3: "#D9B99B"
       },
     },
   },

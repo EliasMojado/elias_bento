@@ -1,0 +1,273 @@
+[
+  {
+    "recipe": {
+      "id": "classic-bento",
+      "title": "Classic Bento Box",
+      "description": "A traditional Japanese bento box featuring rice, grilled fish, pickled vegetables, and a sweet tamagoyaki egg.",
+      "image": "https://www.globalkitchenjapan.com/cdn/shop/articles/What_is_Shokado_Bento_Box_a_Classic-Style_Bento_Box_Originated_from_Japanese_Kaiseki_Cuisine_1_1600x.jpg?v=1620290205",
+      "ingredients": [
+        "1 cup of cooked rice",
+        "1 fillet of grilled fish",
+        "1/2 cup of pickled vegetables",
+        "1 sweet tamagoyaki egg",
+        "1 tablespoon of soy sauce",
+        "1 teaspoon of sesame seeds"
+      ],
+      "steps": [
+        "1. Cook the rice according to package instructions and let it cool.",
+        "2. Grill the fish fillet until cooked through and flaky.",
+        "3. Prepare the tamagoyaki egg by whisking eggs and cooking in a pan until set.",
+        "4. Arrange the cooked rice in one compartment of the bento box.",
+        "5. Place the grilled fish in another compartment.",
+        "6. Add the pickled vegetables next to the fish.",
+        "7. Slice the tamagoyaki egg and place it in a separate compartment.",
+        "8. Drizzle soy sauce over the rice.",
+        "9. Sprinkle sesame seeds on top of the tamagoyaki.",
+        "10. Close the bento box and serve or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "chicken-teriyaki",
+      "title": "Chicken Teriyaki Bento",
+      "description": "A delicious bento box featuring teriyaki chicken, steamed rice, broccoli, and a side of fruit.",
+      "image": "https://foodhub.scene7.com/is/image/woolworthsltdprod/2007-teriyaki-chicken-bento-box:Mobile-1300x1150",
+      "ingredients": [
+        "1 cup of steamed rice",
+        "1 boneless chicken breast",
+        "2 tablespoons of teriyaki sauce",
+        "1 cup of steamed broccoli",
+        "1/2 cup of sliced strawberries",
+        "1 tablespoon of sesame seeds"
+      ],
+      "steps": [
+        "1. Cook the rice according to package instructions and keep warm.",
+        "2. Marinate the chicken breast in teriyaki sauce for at least 30 minutes.",
+        "3. Grill or pan-fry the marinated chicken until cooked through and slightly caramelized.",
+        "4. Steam the broccoli until tender and vibrant green.",
+        "5. Arrange the steamed rice in one compartment of the bento box.",
+        "6. Slice the cooked chicken breast and place it next to the rice.",
+        "7. Add the steamed broccoli to a separate compartment.",
+        "8. Arrange sliced strawberries in a small section of the bento box.",
+        "9. Garnish with sesame seeds on the chicken.",
+        "10. Close the bento box and enjoy immediately or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "vegetarian-bento",
+      "title": "Vegetarian Bento Box",
+      "description": "A vibrant bento box filled with tofu, assorted vegetables, quinoa, and a tangy dipping sauce.",
+      "image": "https://deliciousnotgorgeous.com/wp-content/uploads/2019/02/vegetarian-bento-box-00344.jpg",
+      "ingredients": [
+        "1 cup of cooked quinoa",
+        "1/2 cup of cubed tofu",
+        "1/2 cup of sliced bell peppers",
+        "1/2 cup of shredded carrots",
+        "1/4 cup of edamame",
+        "2 tablespoons of soy sauce",
+        "1 tablespoon of sesame oil"
+      ],
+      "steps": [
+        "1. Cook the quinoa according to package instructions and keep warm.",
+        "2. Cut the tofu into cubes and pan-fry until golden brown on all sides.",
+        "3. Slice the bell peppers and shred the carrots.",
+        "4. Heat the sesame oil in a pan and sauté the bell peppers and carrots until tender-crisp.",
+        "5. Arrange the cooked quinoa in one compartment of the bento box.",
+        "6. Add the pan-fried tofu cubes to a separate compartment.",
+        "7. Place the sautéed vegetables in another section of the box.",
+        "8. Add a small portion of edamame to one side of the bento box.",
+        "9. Serve with a side of soy sauce for dipping.",
+        "10. Close the bento box and serve warm or refrigerate until ready to enjoy."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "salmon-avocado",
+      "title": "Salmon and Avocado Bento",
+      "description": "A refreshing bento box featuring grilled salmon, sliced avocado, mixed greens, and a side of miso soup.",
+      "image": "https://www.eatingwell.com/thmb/MPWR2eGkV-s16xcABoFquPcqk9I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chile-garlic-salmon-bento-box-with-avocado-564ac0b17fee48eeacd7f9504c4d32f0.jpg",
+      "ingredients": [
+        "1 fillet of grilled salmon",
+        "1/2 avocado, sliced",
+        "1 cup of mixed greens",
+        "1/2 cup of cherry tomatoes",
+        "1 cup of miso soup",
+        "1 tablespoon of soy sauce"
+      ],
+      "steps": [
+        "1. Preheat the grill or oven to medium-high heat.",
+        "2. Season the salmon fillet with salt and pepper, and grill until cooked through.",
+        "3. Slice the avocado and prepare the mixed greens.",
+        "4. Prepare the miso soup according to package instructions.",
+        "5. Arrange the grilled salmon fillet in one compartment of the bento box.",
+        "6. Place the sliced avocado next to the salmon.",
+        "7. Add the mixed greens and cherry tomatoes to another section of the box.",
+        "8. Pour the miso soup into a small, separate container.",
+        "9. Serve with a side of soy sauce for added flavor.",
+        "10. Close the bento box and enjoy the meal warm or store in the refrigerator until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "beef-broccoli",
+      "title": "Beef and Broccoli Bento",
+      "description": "A savory bento box featuring tender beef slices with broccoli, jasmine rice, and a side of pickled ginger.",
+      "image": "https://img.freepik.com/premium-photo/individual-portion-beef-broccoli-bento-box_762026-103098.jpg",
+      "ingredients": [
+        "1 cup of jasmine rice",
+        "200g of beef slices",
+        "1 cup of broccoli florets",
+        "2 tablespoons of oyster sauce",
+        "1 tablespoon of soy sauce",
+        "1 tablespoon of vegetable oil",
+        "1/4 cup of pickled ginger"
+      ],
+      "steps": [
+        "1. Cook the jasmine rice according to package instructions and keep warm.",
+        "2. Heat vegetable oil in a pan and stir-fry the beef slices until browned.",
+        "3. Add oyster sauce and soy sauce to the beef, and cook until the sauce is slightly thickened.",
+        "4. Steam or blanch the broccoli until tender-crisp.",
+        "5. Arrange the jasmine rice in one compartment of the bento box.",
+        "6. Place the beef slices and broccoli in separate compartments.",
+        "7. Add pickled ginger to a small section of the box.",
+        "8. Close the bento box and serve warm or store in the refrigerator until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "pork-katsu",
+      "title": "Pork Katsu Bento",
+      "description": "A delicious bento box featuring crispy pork katsu, steamed rice, shredded cabbage, and a tangy tonkotsu sauce.",
+      "image": "https://japan.recipetineats.com/wp-content/uploads/2017/09/Tonkatsu_Bento_0603.jpg",
+      "ingredients": [
+        "1 cup of steamed rice",
+        "1 pork cutlet",
+        "1/2 cup of all-purpose flour",
+        "1 egg, beaten",
+        "1 cup of panko breadcrumbs",
+        "1/4 cup of tonkotsu sauce",
+        "1 cup of shredded cabbage"
+      ],
+      "steps": [
+        "1. Preheat the oil for frying in a pan.",
+        "2. Coat the pork cutlet in flour, dip in beaten egg, and then coat with panko breadcrumbs.",
+        "3. Fry the breaded pork cutlet until golden brown and crispy, then drain on paper towels.",
+        "4. Slice the pork cutlet into strips.",
+        "5. Arrange the steamed rice in one compartment of the bento box.",
+        "6. Place the sliced pork katsu in another section.",
+        "7. Add shredded cabbage to a separate compartment.",
+        "8. Serve with tonkotsu sauce on the side.",
+        "9. Close the bento box and enjoy immediately or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "shrimp-tempura",
+      "title": "Shrimp Tempura Bento",
+      "description": "A delightful bento box featuring crispy shrimp tempura, soba noodles, and a side of dipping sauce.",
+      "image": "https://mizukifoods.com/wp-content/uploads/2024/06/45.-EBI-TEMPURA-BENTO-4PIECES.jpg",
+      "ingredients": [
+        "1 cup of cooked soba noodles",
+        "6-8 shrimp, peeled and deveined",
+        "1/2 cup of tempura batter mix",
+        "1/4 cup of cold water",
+        "Vegetable oil for frying",
+        "1/4 cup of tempura dipping sauce"
+      ],
+      "steps": [
+        "1. Prepare the soba noodles according to package instructions and keep warm.",
+        "2. Mix tempura batter mix with cold water to make a batter.",
+        "3. Heat vegetable oil in a deep pan or fryer.",
+        "4. Dip shrimp in the batter and fry until golden brown and crispy.",
+        "5. Drain shrimp on paper towels to remove excess oil.",
+        "6. Arrange the cooked soba noodles in one compartment of the bento box.",
+        "7. Place the crispy shrimp tempura in another section.",
+        "8. Add a small container of tempura dipping sauce.",
+        "9. Close the bento box and enjoy immediately or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "spicy-tofu",
+      "title": "Spicy Tofu Bento",
+      "description": "A flavorful bento box with spicy tofu, jasmine rice, sautéed vegetables, and a side of pickled cucumbers.",
+      "image": "https://thelittleveggiekorean.com/wp-content/uploads/2020/12/67409204_2371190773144916_1793563769985564672_n.jpg",
+      "ingredients": [
+        "1 cup of jasmine rice",
+        "200g of firm tofu, cubed",
+        "2 tablespoons of spicy hoisin sauce",
+        "1 cup of mixed bell peppers",
+        "1/2 cup of sliced mushrooms",
+        "1/4 cup of pickled cucumbers",
+        "1 tablespoon of vegetable oil"
+      ],
+      "steps": [
+        "1. Cook the jasmine rice according to package instructions and keep warm.",
+        "2. Heat vegetable oil in a pan and cook the tofu cubes until golden brown.",
+        "3. Add spicy hoisin sauce to the tofu and cook until the sauce thickens.",
+        "4. Sauté the mixed bell peppers and mushrooms until tender.",
+        "5. Arrange the jasmine rice in one compartment of the bento box.",
+        "6. Place the spicy tofu in another section.",
+        "7. Add the sautéed vegetables to a separate compartment.",
+        "8. Include pickled cucumbers on the side.",
+        "9. Close the bento box and serve warm or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "california-roll",
+      "title": "California Roll Bento",
+      "description": "A sushi-inspired bento box featuring California rolls, edamame, pickled ginger, and a side of soy sauce.",
+      "image": "https://cdn3.didevelop.com/public/cdn/533_69fa774bbec90403501e9cdcda2232ab.jpg",
+      "ingredients": [
+        "4 California rolls",
+        "1/2 cup of edamame",
+        "1/4 cup of pickled ginger",
+        "1 tablespoon of soy sauce"
+      ],
+      "steps": [
+        "1. Arrange the California rolls in one compartment of the bento box.",
+        "2. Add edamame to a separate section.",
+        "3. Include pickled ginger in a small container.",
+        "4. Serve with a side of soy sauce for dipping.",
+        "5. Close the bento box and enjoy the meal immediately or refrigerate until ready to eat."
+      ]
+    }
+  },
+  {
+    "recipe": {
+      "id": "eggplant-katsu",
+      "title": "Eggplant Katsu Bento",
+      "description": "A vegetarian bento box featuring crispy eggplant katsu, steamed rice, shredded cabbage, and a tangy tonkotsu sauce.",
+      "image": "https://images.deliveryhero.io/image/fd-th/LH/ftzx-listing.jpg",
+      "ingredients": [
+        "1 cup of steamed rice",
+        "1 eggplant, sliced into rounds",
+        "1/2 cup of all-purpose flour",
+        "1 egg, beaten",
+        "1 cup of panko breadcrumbs",
+        "1/4 cup of tonkotsu sauce",
+        "1 cup of shredded cabbage"
+      ],
+      "steps": [
+        "1. Preheat the oil for frying in a pan.",
+        "2. Coat the eggplant slices in flour, dip in beaten egg, and then coat with panko breadcrumbs.",
+        "3. Fry the breaded eggplant slices until golden brown and crispy, then drain on paper towels.",
+        "4. Arrange the steamed rice in one compartment of the bento box.",
+        "5. Place the crispy eggplant katsu in another section.",
+        "6. Add shredded cabbage to a separate compartment.",
+        "7. Serve with tonkotsu sauce on the side.",
+        "8. Close the bento box and enjoy immediately or refrigerate until ready to eat."
+      ]
+    }
+  }
+]
