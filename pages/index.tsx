@@ -1,21 +1,9 @@
 import Image from "next/image";
-import localFont from "next/font/local";
 import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import Navbar from "./components/navbar";
 import { Recipe } from '@/types/recipe';
 import Link from 'next/link';
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { geistSans, geistMono, neueRegrade } from './_app'; 
 
 type HomeProps = {
   recipes: Recipe[];
@@ -30,13 +18,13 @@ export default function Home({ recipes }: HomeProps) {
         <div className="flex col-span-2 gap-4">
 
           {/* TITLE */}
-          <div className="bg-biege2 p-10 rounded-lg flex flex-col justify-between h-full">
-            <h1 className="text-6xl font-bold">Collection of Bento Box Recipes</h1>
-            <h2 className="text-3xl italic mt-2">Across Different Parts of the World ✈️</h2>
+          <div className="bg-customcrimson text-[#FEEBC6] p-10 rounded-lg flex flex-col justify-between h-full">
+            <h1 className={`text-6xl font-bold ${neueRegrade.className}`}>Collection of Bento Box Recipes</h1>
+            <h2 className={`text-3xl italic mt-2 ${geistMono.className}`}>Across Different Parts of the World ✈️</h2>
           </div>
 
           {/* IMAGE */}
-          <div className="bg-biege3 flex rounded-lg flex-shrink-0 w-[40%]">
+          <div className="bg-customblue flex rounded-lg flex-shrink-0 w-[40%] border-2 border-black">
             <Image 
               src="/bento.png"
               alt="Bento Picture"
@@ -49,8 +37,8 @@ export default function Home({ recipes }: HomeProps) {
         </div>
         
         {/* LIST OF RECIPES */}
-        <div className="bg-biege2 p-4 row-span-2 rounded-lg h-[800px] flex flex-col">
-          <h1 className="text-2xl font-bold">RECIPES</h1>
+        <div className="bg-biege2 p-4 row-span-2 rounded-lg h-[800px] flex flex-col border-2 border-black">
+          <h1 className={`text-3xl italic ${geistMono.className}`}>RECIPES</h1>
 
           <ul className="flex-1 overflow-y-auto">
             {recipes.map((recipe, index) => (
@@ -68,7 +56,7 @@ export default function Home({ recipes }: HomeProps) {
         </div>
 
         {/* DESCRIPTION */}
-        <div className="bg-biege1 p-4 rounded-lg">
+        <div className="bg-biege1 p-4 rounded-lg border-2 border-black">
           <h2 className="text-2xl p-4">
             Welcome to a culinary corner where a passion for bentos truly comes to life. 
             As a chef and devoted bento enthusiast, Elias believes that every meal is an opportunity to create art. 
@@ -77,11 +65,11 @@ export default function Home({ recipes }: HomeProps) {
         </div>
         
         {/* FEEDBACK */}
-        <div className="bg-biege2 p-6 rounded-lg flex flex-col justify-between h-full">
+        <div className="bg-biege3 p-6 rounded-lg flex flex-col justify-between h-full border-2 border-black">
           {/* TEXT */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4">We’d Love to Hear from You!</h3>
-            <p className="text-lg mb-4">
+            <h3 className={`text-3xl italic font-semibold mt-2 ${geistSans.className}`}>We’d Love to Hear from You!</h3>
+            <p className="text-lg pt-4 mb-4">
               Let us know what you think! If you have any suggestions or recipes you’d like us to include, we’re all ears. 
               Your feedback helps us make our Bento Box recipes even better.
             </p>

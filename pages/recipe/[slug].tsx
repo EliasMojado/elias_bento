@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Recipe } from '@/types/recipe';
 import Navbar from '../components/navbar';
+import { geistSans, geistMono, neueRegrade } from '../_app'; 
 
 const RecipePage = () => {
   const router = useRouter();
@@ -46,34 +47,29 @@ const RecipePage = () => {
         <div className="row-span-2">
 
           {/* DISH DESCRIPTION */}
-          <div className="bg-biege3 px-10 rounded-lg flex flex-col mb-4">
+          <div className="bg-biege3 px-10 rounded-lg flex flex-col mb-4 border-2 border-black">
             {/* Back Button */}
             <Link href="/" passHref>
-              <button className="text-5xl pt-2">&larr;</button>
+              <button className="text-5xl py-2">&larr;</button>
             </Link>
             
-            <h1 className="text-6xl font-bold py-4">{recipe.title}</h1>
+            <h1 className={`text-6xl font-bold ${neueRegrade.className}`}>{recipe.title}</h1>
             <p className="text-xl italic py-4">{recipe.description}</p>
           </div>
 
-           {/* IMAGE */}
-          <div className="bg-biege3 flex rounded-lg flex-shrink-0 w-full h-auto" style={{ overflow: 'hidden' }}>
+          {/* IMAGE */}
+          <div className="bg-biege3 flex rounded-lg flex-shrink-0 w-full h-auto border-2 border-black">
             <img
               src={recipe.image}
               alt={recipe.title}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'cover',
-                borderRadius: '8px'
-              }}
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
         
         {/* INGREDIENTS */}
-        <div className="bg-biege2 p-4 rounded-lg row-span-2 bg-[url('/pattern.png')] bg-bottom bg-no-repeat bg-cover]">
-          <h2 className="text-4xl italic font-semibold pb-10">INGREDIENTS</h2>
+        <div className="bg-biege2 p-4 rounded-lg row-span-2 bg-[url('/pattern.png')] bg-bottom bg-no-repeat bg-cover] border-2 border-black">
+          <h2 className={`text-4xl font-bold italic pb-2 ${geistMono.className}`}>INGREDIENTS</h2>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
               <li className="text-xl italic py-1" key={index}>{ingredient}</li>
@@ -82,8 +78,8 @@ const RecipePage = () => {
         </div>
 
         {/* STEPS */}
-        <div className="bg-biege1 p-4 row-span-2 rounded-lg">
-          <h1 className="text-4xl font-bold pb-4">STEPS</h1>
+        <div className="bg-biege1 p-4 row-span-2 rounded-lg border-2 border-black">
+          <h1 className={`text-4xl font-bold italic pb-2 ${geistMono.className}`}>STEPS</h1>
 
           <ol>
             {recipe.steps.map((step, index) => {
@@ -96,8 +92,8 @@ const RecipePage = () => {
               const [, number, text] = match;
 
               return (
-                <li className="text-lg py-2 flex items-start" key={index}>
-                  <span className="text-2xl mr-2 pr-4">{number}</span>
+                <li className=" text-lg py-2 flex items-start" key={index}>
+                  <span className="text-2xl font-bold mr-2 pr-4">{number}</span>
                   <span className="flex-1">{text}</span>
                 </li>
               );
