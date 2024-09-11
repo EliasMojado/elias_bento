@@ -14,21 +14,36 @@ const RecipePage = () => {
 
   useEffect(() => {
     if (!slug) return;
-
+  
     const fetchRecipe = async () => {
       try {
         const res = await fetch('/api/recipe');
-        const recipes = await res.json();
-        const foundRecipe = recipes.find((recipe: Recipe) => recipe.id === slug);
+  
+        // Check if the response status is OK
+        if (!res.ok) {
+          throw new Error(`Failed to fetch recipes: ${res.status} ${res.statusText}`);
+        }
+  
+        let recipes;      
+        try {
+          recipes = await res.json();
+        } catch (jsonError) {
+          throw new Error('Error parsing the response as JSON');
+        }
+  
+        // Find the recipe based on the slug
+        const foundRecipe = recipes.find((recipe: Recipe) => recipe.id === slug);  
         setRecipe(foundRecipe || null);
-      } catch (error) {
-        console.error('Error fetching recipes:', error);
+      } catch (error: any) {
+        // Log the error and set the recipe to null
+        console.error('Error fetching recipes:', error.message);
         setRecipe(null);
       }
     };
-
+    
     fetchRecipe();
   }, [slug]);
+  
 
   if (!slug) return <div>Loading...</div>;
 
@@ -43,16 +58,13 @@ const RecipePage = () => {
       <Navbar />
 
       <main className="flex-1 grid grid-cols-3 gap-4 pt-4">
-
         <div className="row-span-2">
 
           {/* DISH DESCRIPTION */}
           <div className="bg-biege3 px-10 rounded-lg flex flex-col mb-4 border-2 border-black">
-            {/* Back Button */}
             <Link href="/" passHref>
               <button className="text-5xl py-2">&larr;</button>
             </Link>
-            
             <h1 className={`text-6xl font-bold ${neueRegrade.className}`}>{recipe.title}</h1>
             <p className="text-xl italic py-4">{recipe.description}</p>
           </div>
@@ -83,10 +95,8 @@ const RecipePage = () => {
 
           <ol>
             {recipe.steps.map((step, index) => {
-              // Regular expression to match number followed by a period and space
               const regex = /^(\d+)\.\s*(.*)$/;
               const match = step.match(regex);
-
               if (!match) return <li className="text-lg py-1" key={index}>{step}</li>;
 
               const [, number, text] = match;
@@ -100,7 +110,6 @@ const RecipePage = () => {
             })}
           </ol>
         </div>
-        
       </main>      
     </div>
   );

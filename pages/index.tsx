@@ -1,15 +1,58 @@
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 import Navbar from "./components/navbar";
 import { Recipe } from '@/types/recipe';
 import Link from 'next/link';
 import { geistSans, geistMono, neueRegrade } from './_app'; 
 
-type HomeProps = {
-  recipes: Recipe[];
-};
+export default function Home() {
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-export default function Home({ recipes }: HomeProps) {
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      const MAX_RETRIES = 3;
+      const RETRY_DELAY = 1000;
+      
+      for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+        try {
+          const res = await fetch('/api/recipe');
+          
+          if (!res.ok) {
+            throw new Error(`Failed to fetch recipes: ${res.status} ${res.statusText}`);
+          }
+          
+          const data = await res.json();
+          setRecipes(data);
+          setLoading(false);
+          return; // Exit the loop if successful
+        } catch (error: any) {
+          console.error(`Attempt ${attempt + 1} failed:`, error.message);
+          
+          if (attempt < MAX_RETRIES - 1) {
+            await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+          } else {
+            setError('Failed to load recipes. Please try again later.');
+            setLoading(false);
+          }
+        }
+      }
+    };
+
+    fetchRecipes();
+  }, []);
+
+  // Todo: better ui for loading and error states
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <div className="flex flex-col">
       <Navbar />
@@ -91,15 +134,4 @@ export default function Home({ recipes }: HomeProps) {
       </main>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/recipe');
-  const recipes = await res.json();
-
-  return {
-    props: {
-      recipes
-    }
-  };
 }

@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
+import Head from 'next/head';
 
 export const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +25,9 @@ export const neueRegrade = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
+      <Head>
+        <title>Elias' Bento</title>
+      </Head>
       <Component {...pageProps} />
     </div>
   );
