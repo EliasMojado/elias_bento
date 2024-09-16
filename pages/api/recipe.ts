@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { Recipe } from '@/types/recipe';
 
-const getRecipes = (): Recipe[] => {
+export const getRecipes = (): Recipe[] => {
   const filePath = path.join(process.cwd(), '/data/recipes.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
   const data = JSON.parse(jsonData);
@@ -23,3 +23,4 @@ export default function handler(
     res.status(500).json([]);
   }
 }
+

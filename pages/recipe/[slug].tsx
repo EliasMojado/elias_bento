@@ -1,55 +1,28 @@
-// pages/recipe/[slug].tsx
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Recipe } from '@/types/recipe';
+import {RecipePageProps } from '@/types/recipe';
 import Navbar from '../components/navbar';
-import { geistSans, geistMono, neueRegrade } from '../_app'; 
+import {geistMono, neueRegrade } from '../_app'; 
+import {getRecipeBySlug } from '../hooks/fetchrecipe';
 
-const RecipePage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+// Server-Side Rendering (SSR)
+export const getServerSideProps = async (context: any) => {
+  const { slug } = context.params;
+  const { recipe, error } = await getRecipeBySlug(slug);
 
-  const [recipe, setRecipe] = useState<Recipe | null>(null);
+  return {
+    props: {
+      recipe,
+      error,
+    },
+  };
+}
 
-  useEffect(() => {
-    if (!slug) return;
-  
-    const fetchRecipe = async () => {
-      try {
-        const res = await fetch('/api/recipe');
-  
-        // Check if the response status is OK
-        if (!res.ok) {
-          throw new Error(`Failed to fetch recipes: ${res.status} ${res.statusText}`);
-        }
-  
-        let recipes;      
-        try {
-          recipes = await res.json();
-        } catch (jsonError) {
-          throw new Error('Error parsing the response as JSON');
-        }
-  
-        // Find the recipe based on the slug
-        const foundRecipe = recipes.find((recipe: Recipe) => recipe.id === slug);  
-        setRecipe(foundRecipe || null);
-      } catch (error: any) {
-        // Log the error and set the recipe to null
-        console.error('Error fetching recipes:', error.message);
-        setRecipe(null);
-      }
-    };
-    
-    fetchRecipe();
-  }, [slug]);
-  
-
-  if (!slug) return <div>Loading...</div>;
+const RecipePage = ({ recipe, error }: RecipePageProps) => {
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   if (!recipe) {
-    console.log('Recipe with slug not found. Redirecting to 404 page...');
-    // Redirect to 404 page if recipe is not found
     return <div>Recipe not found</div>;
   }
 

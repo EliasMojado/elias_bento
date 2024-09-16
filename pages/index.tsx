@@ -1,54 +1,24 @@
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
 import Navbar from "./components/navbar";
-import { Recipe } from '@/types/recipe';
+import { HomeProps } from '@/types/recipe';
 import Link from 'next/link';
 import { geistSans, geistMono, neueRegrade } from './_app'; 
+import { getAllRecipes } from './hooks/fetchrecipe';
 
-export default function Home() {
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+// Server-side data fetching
+export const getServerSideProps = async () => {
+  const { recipes, error } = await getAllRecipes();
 
-  useEffect(() => {
-    const fetchRecipes = async () => {
-      const MAX_RETRIES = 3;
-      const RETRY_DELAY = 1000;
-      
-      for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
-        try {
-          const res = await fetch('/api/recipe');
-          
-          if (!res.ok) {
-            throw new Error(`Failed to fetch recipes: ${res.status} ${res.statusText}`);
-          }
-          
-          const data = await res.json();
-          setRecipes(data);
-          setLoading(false);
-          return; // Exit the loop if successful
-        } catch (error: any) {
-          console.error(`Attempt ${attempt + 1} failed:`, error.message);
-          
-          if (attempt < MAX_RETRIES - 1) {
-            await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-          } else {
-            setError('Failed to load recipes. Please try again later.');
-            setLoading(false);
-          }
-        }
-      }
-    };
+  return {
+    props: {
+      recipes,
+      error,
+    },
+  };
+};
 
-    fetchRecipes();
-  }, []);
-
-  // Todo: better ui for loading and error states
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
+export default function Home({ recipes, error }: HomeProps) {
   if (error) {
     return <p>{error}</p>;
   }
@@ -93,7 +63,7 @@ export default function Home() {
                   <h3 className="text-xl pb-2 font-semibold">{recipe.title}</h3>
                   <p className="text-md">{recipe.description}</p>
                 </li>
-                </Link>
+              </Link>
             ))}
           </ul>
         </div>

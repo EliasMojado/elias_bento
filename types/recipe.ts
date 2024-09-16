@@ -7,3 +7,12 @@ export type Recipe = {
     steps: string[];
 }
 
+export interface RecipePageProps {
+    recipe: Recipe | null;
+    error?: string | null;
+}
+
+export interface HomeProps {
+    recipes: Recipe[];
+    error?: string | null;
+  }
